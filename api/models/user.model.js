@@ -7,13 +7,13 @@ const userSchema = new mongoose.Schema({
         unique: true,
     },
     email: {
-        type: email,
+        type: String,
         required: true,
     },
 
     password:{
         type: String,
-        required: True
+        required: true
     }
 }, {
     timestamps: true
