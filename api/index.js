@@ -5,12 +5,15 @@ import userRouter from './routes/user.route.js'
 import authRouter from './routes/auth.route.js'
 dotenv.config();
 
-mongoose.connect(process.env.MONGO).
+
+const url = process.env.MONGO ;
+mongoose.connect(url).
 then(() => {
     console.log('Connected to MongoDB!')
 }).catch((err) => {
     console.log(err);
 });
+
 
 
 const app = express()
