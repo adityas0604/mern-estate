@@ -7,6 +7,7 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 import Header from './Components/Header';
 import PrivateRoute from './Components/PrivateRoute';
+import CreateListing from './pages/CreateListing';
 
 export default function 
 () {
@@ -21,6 +22,7 @@ export default function
       <Route path = "/about" element = {<About/>}> </Route>
       <Route element={<PrivateRoute />}>
           <Route path='/profile' element={<Profile />} />
+          <Route path='/create-listing' element={<CreateListing />} />
         </Route>
     </Routes>
     </BrowserRouter>
